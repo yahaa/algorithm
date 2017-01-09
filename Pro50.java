@@ -1,7 +1,6 @@
 
 import java.lang.Math;
 public class Pro50 {
-	
 	public static void main(String[]args) {
 		System.out.println(myPow(2.0, -2147483648));
 	}
