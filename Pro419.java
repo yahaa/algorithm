@@ -1,10 +1,10 @@
 public class Pro419 {
-	private static int []di = { -1, 1, 0, 0};
-	private static int []dj = {0, 0, -1, 1};
-	private static char [][]bor;
-	private static int n, m;
+	private  int []di = { -1, 1, 0, 0};
+	private  int []dj = {0, 0, -1, 1};
+	private  char [][]bor;
+	private  int n, m;
 
-	public static int countBattleships(char[][] board) {
+	public  int countBattleships(char[][] board) {
 		bor = board;
 		n = board.length;
 		m = board[0].length;
@@ -21,7 +21,7 @@ public class Pro419 {
 		return ans;
 	}
 
-	public static void dfs(int x, int y) {
+	public  void dfs(int x, int y) {
 		if (x < 0 || x >= n || y < 0 || y >= m)return;
 		if (bor[x][y] == '.')return;
 		bor[x][y] = '.';
@@ -32,8 +32,8 @@ public class Pro419 {
 		}
 	}
 
-	public static void main(String[]args){
-		char [][]b={{'X','.','.','X'},{'.','.','.','X'},{'.','.','.','X'}};
+	public  void main(String[]args) {
+		char [][]b = {{'X', '.', '.', 'X'}, {'.', '.', '.', 'X'}, {'.', '.', '.', 'X'}};
 
 		System.out.println(countBattleships(b));
 	}
