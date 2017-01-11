@@ -3,11 +3,11 @@ public class Pro5 {
 	public static void main(String[]args) {
 
 		String s = longestPalindrome("abba");
-		System.out.println(s);
 
 	}
 
 	public static String longestPalindrome(String s) {
+
 		StringBuilder ts = new StringBuilder();
 		ts.append("#");
 		int len = s.length();
@@ -33,7 +33,7 @@ public class Pro5 {
 				maxRight = p[i] + i - 1;
 				mid = i;
 			}
-			
+
 			if (p[i] - 1 > ans) {
 				ans = p[i] - 1;
 				j = i;
