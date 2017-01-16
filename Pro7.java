@@ -1,8 +1,6 @@
 public class Pro7 {
 	public static void main(String[]args) {
-		StringBuilder a = new StringBuilder("123456");
-		System.out.println(a.reverse());
-		reverse(-50000);
+		
 	}
 
 	public static int reverse(int x) {
