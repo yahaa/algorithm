@@ -4,7 +4,9 @@ public class Pro344 {
 	}
 
 	public String reverseString(String s) {
-		StringBuilder ts=new StringBuilder(s);
+		StringBuilder ts = new StringBuilder(s);
 		return ts.reverse().toString();
 	}
 }
+
+
