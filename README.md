@@ -1,3 +1,3 @@
-# leetcode一些
+# leetcode
 一些算法题！
 # 
