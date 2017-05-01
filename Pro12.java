@@ -3,11 +3,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 public class Pro12{
     public static void main(String []args){
-        Scanner input=new Scanner(System.in);
-        while(input.hasNext()){
-            int n=input.nextInt();
-            System.out.println(intToRoman(n));
-        }
+        for(int i=1;i<=3999;i++)
+            System.out.println("map.put(\""+intToRoman(i)+"\","+i+");");
     }
 
     public static String intToRoman(int num) {
