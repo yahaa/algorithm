@@ -1,6 +1,6 @@
 public class NK11{
 
-    public double Power(double base, int exponent) {
+    public double power(double x, int n) {
         long t = n;
         double a = x;
         double result = 1;

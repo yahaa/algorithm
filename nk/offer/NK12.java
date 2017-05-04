@@ -11,6 +11,5 @@ public class NK12{
         for(int i=0;i<odd.size();i++){
             array[i]=odd.get(i);
         }
-
     }
 }
