@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 public class NK12{
     public void reOrderArray(int [] array) {
         ArrayList<Integer>odd=new ArrayList<>();
@@ -12,4 +13,5 @@ public class NK12{
             array[i]=odd.get(i);
         }
     }
+    
 }
