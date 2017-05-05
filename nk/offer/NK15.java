@@ -1,5 +1,7 @@
 public class NK15{
+
     public ListNode Merge(ListNode list1,ListNode list2) {
+        
         ListNode p1=list1,p2=list2;
         ListNode res=null;
         if(p1==null&&p2==null)return null;
