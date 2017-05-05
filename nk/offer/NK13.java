@@ -7,17 +7,14 @@ public class NK13{
             n++;
             tnode=tnode.next;
         }
-        
         if(n-k<0)return null;
         int t=0;
-
         while(t!=(n-k)){
             t++;
             res=res.next;
         }
         return res;
     }
-
 }
 
 
