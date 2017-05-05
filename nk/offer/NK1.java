@@ -1,8 +1,5 @@
 import java.util.Arrays;
 public class NK1{
-    public static void main(String[]args){
-    }
-
     public boolean find(int target, int [][] array) {
         int n=array.length;
         if(n==0)return false;
