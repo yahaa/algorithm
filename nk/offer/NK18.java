@@ -4,6 +4,8 @@ import java.util.Collections;
 public class NK18{
     private Stack<Integer>s=new Stack();
 
+    
+
     public void push(int node) {
        s.push(node);
     }
