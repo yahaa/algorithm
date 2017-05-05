@@ -8,6 +8,7 @@ public class NK3{
            listNode=listNode.next;
        }
        reverse(res);
+       
        return res;
 
    }
