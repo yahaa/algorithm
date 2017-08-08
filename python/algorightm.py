@@ -151,6 +151,12 @@ def binary_search(a, target, start=0, end=-1):
     return -1
 
 
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+
 class Heap(object):
     """
     基于list实现的堆,
@@ -258,3 +264,4 @@ if __name__ == '__main__':
     a = [2, 4, 1, 5, 3, 4, 4, 4, 4, 4, 78]
     print se_sort(a)
     print binary_search(a, 12)
+    print gcd(4, 6)
