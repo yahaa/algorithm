@@ -148,7 +148,7 @@ def binary_search(a, target, start=0, end=-1):
             right = mid - 1
         else:
             left = mid + 1
-    return -1
+    return -(mid + 1)
 
 
 def gcd(a, b):
@@ -191,7 +191,8 @@ class Heap(object):
                     t = index * 2 + 2
 
             if t != index:
-                self.array[index], self.array[t] = self.array[t], self.array[index]
+                self.array[index], self.array[
+                    t] = self.array[t], self.array[index]
                 index = t
             else:
                 break
@@ -203,12 +204,14 @@ class Heap(object):
             p = (index - 1) / 2
             if self.minm:
                 if self.array[index] < self.array[p]:
-                    self.array[index], self.array[p] = self.array[p], self.array[index]
+                    self.array[index], self.array[
+                        p] = self.array[p], self.array[index]
                 else:
                     break
             else:
                 if self.array[index] > self.array[p]:
-                    self.array[index], self.array[p] = self.array[p], self.array[index]
+                    self.array[index], self.array[
+                        p] = self.array[p], self.array[index]
                 else:
                     break
 
@@ -245,23 +248,7 @@ class Heap(object):
 
 
 if __name__ == '__main__':
-    print 1654 / 720
-    print factorial(6)
-    print fibonacci(5)
-    a = ['a', 'b', 'c']
+    a = [1, 2, 3, 4, 5, 6, 7, 9]
 
-    next_permutation(a, 0, 3)
-
-    b = [1, 2]
-    print permutation_n1(b)
-    print b
-    n = 100
-    print bin(n)
-    print bin(-n)
-    print bin(n & -n)
-    print bin(factorial(5))
-    print one_of_factorial_n(5)
-    a = [2, 4, 1, 5, 3, 4, 4, 4, 4, 4, 78]
-    print se_sort(a)
-    print binary_search(a, 12)
-    print gcd(4, 6)
+    print binary_search(a, 0)
+    print binary_search(a, 6)
