@@ -6,11 +6,13 @@ public class Algorithm {
     public static int []prime = new int[N];
 
     public static void main(String []args) {
-        int []a = {1, 7, 15, 20, 3, 3, 4, 5, 7,100,2,44,22,2,34,5,6,7};
-        mergeSort(a);
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " ");
-        }
+        // int []a = {1, 7, 15, 20, 3, 3, 4, 5, 7,100,2,44,22,2,34,5,6,7};
+        // mergeSort(a);
+        // for (int i = 0; i < a.length; i++) {
+        //     System.out.print(a[i] + " ");
+        // }
+        int []a={1,2,3,4,6};
+        System.out.println(isGood(a));
     }
 
     public static  List<Integer> solve() {
@@ -56,5 +58,26 @@ public class Algorithm {
         mergeSortInner(a,left,mid,tm);
         mergeSortInner(a,mid+1,right,tm);
         merge(a,left,mid,right,tm);
+    }
+
+    public static boolean isGood(int []a){
+        mergeSort(a);
+        int z=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]==0)z++;
+        }
+
+        int mm=-1000;
+        for(int i=1;i<5;i++){
+            if(a[i]>0&&a[i-1]>0)
+                mm=Math.max(a[i]-a[i-1],mm);
+        }
+
+        if(z>=4)return true;
+        if(z==3&&mm<=4)return true;
+        if(z==2&&mm<=3)return true;
+        if(z==1&&mm<=2)return true;
+        if(z==0&&mm<=1)return true;
+        return false;
     }
 }

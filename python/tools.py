@@ -71,11 +71,18 @@ if __name__ == '__main__':
 #     # t = TT()
 # # print len(t)
 
-    app = Flask()
+    # app = Flask()
+    #
+    # @app.route('/')
+    # def hello():
+    #     print 'hello world!'
+    # print hello, 5675
+    #
+    # app.server('/')
 
-    @app.route('/')
-    def hello():
-        print 'hello world!'
-    print hello, 5675
 
-    app.server('/')
+
+
+    a='''
+    {}.{}
+    '''

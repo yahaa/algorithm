@@ -3,7 +3,7 @@
 **/
 import java.util.*;
 import static java.lang.Math.*;
-
+import static java.lang.Character.*;
 public class NK33 {
 	public static int res = 0;
 	public static Scanner input = new Scanner(System.in);
@@ -17,12 +17,19 @@ public class NK33 {
 	}
 
 	public static void main(String []args) {
+		String aaa="1234567";
+		println(strToInt(aaa));
 
-		int []a={3,2,1,3,4,4,5,5};
-		int []res1=new int[1];
-		int []res2=new int[1];
-		findNumsAppearOnce(a,res1,res2);
-		println(res1[0]+" "+res2[0]);
+		println(tSum(9,5));
+		int bb = 4;
+		println(sum(10));
+
+
+		int []a = {3, 2, 1, 3, 4, 4, 5, 5};
+		int []res1 = new int[1];
+		int []res2 = new int[1];
+		findNumsAppearOnce(a, res1, res2);
+		println(res1[0] + " " + res2[0]);
 
 
 	}
@@ -75,6 +82,54 @@ public class NK33 {
 				num1[0] ^= array[i];
 			}
 		}
+	}
+
+	public static int soo(int n, int k) {
+		return n > 1 ? (soo(n - 1, k) + k) % n : 0;
+	}
+
+	public static int sum(int n) {
+		int temp = 0;
+		boolean t = (n > 0) && ((temp += sum(n - 1)) > 0);
+		return n + temp;
+	}
+
+	public static int tSum(int a, int b) {
+		int sum = 0, c = 0;
+		do {
+			sum = a ^ b;
+			b = (a & b) << 1;    //jingwei
+			a = sum;
+		} while (b != 0);
+
+		return sum;
+	}
+
+	public static int strToInt(String str){
+		int res=0;
+		int n=str.length();
+		if(n<=0)return 0;
+		Character z=str.charAt(0);
+		int ng=1;
+		int i=0;
+		if(z=='+'){
+			i++;
+		}else if(z=='-'){
+			ng=-1;
+			i++;
+		}
+		for(;i<n;i++){
+			Character c=str.charAt(i);
+			if(!isDigit(c))return 0;
+			res=res*10+((int)(c)-48);
+		}
+
+		return res*ng;
+
+	}
+
+	public static int[]multiply(int []a){
+		
 	}
 }
 

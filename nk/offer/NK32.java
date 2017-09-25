@@ -17,7 +17,10 @@ public class NK32 {
 
 	public static void main(String []args) {
 		int []a = {1, 2, 3, 4, 5, 6, 7, 9};
-		println(binarySearch(a, 8));
+		// println(binarySearch(a, 8));
+		twoSum(a, 12);
+		String s = "abcdefghjkl";
+		println(leftRota(s, 10));
 
 	}
 
@@ -54,6 +57,58 @@ public class NK32 {
 		}
 		return -(mid + 1);
 
+	}
+
+	public static ArrayList<Integer> twoSum(int []a, int su) {
+		int n = a.length;
+		ArrayList<Integer>res = new ArrayList<>();
+		if (n < 2)return res;
+		int m = su * su;
+		int res1 = -1, res2 = -1;
+		int []vi = new int[n];
+		for (int i = 0; i < n; i++) {
+			if (vi[i] == 0) {
+				int t = su - a[i];
+				int index = binarySearch(a, t);
+				if (index >= 0 && index != i) {
+					vi[i] = 1;
+					vi[index] = 1;
+					if (a[i] * a[index] < m) {
+						m = a[i] * a[index];
+						res1 = Math.min(a[i], a[index]);
+						res2 = Math.max(a[i], a[index]);
+					}
+				}
+			}
+		}
+		if (res1 == -1 || res2 == -1)return res;
+		res.add(res1);
+		res.add(res2);
+		return res;
+	}
+
+	public static String leftRota(String str, int n) {
+		String res = "";
+		int len = str.length();
+		if (len <= 0)return res;
+		n %= len;
+		res += str.substring(n);
+		res += str.substring(0, n);
+		return res;
+	}
+
+
+	public static String rev(String str){
+		String res="";
+		if(str==null||str.length()<=0)return res;
+		String []t=str.split("[ ]+");
+		for(int i=t.length-1;i>=0;i++)res+=t[i]+" ";
+		return res;
+
+	}
+
+	public static boolean isGood(int []a){
+		
 	}
 }
 
