@@ -51,6 +51,15 @@ def one_of_factorial_n(n):
         res += n
     return res
 
+def solve():
+    n=raw_input()
+    a=[]
+    for i in range(n):
+        t=raw_input()
+        a.append(t)
+    
+
+
 
 def permutation_n(a, n):
     # 求一个序列的第n个字典排序序列,效率高但是空间复杂度高
