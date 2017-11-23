@@ -19,7 +19,6 @@ func A479(a, b, c int) int {
 	res = max(res, (a+b)*c)
 	res = max(res, a*(b+c))
 	return res
-
 }
 
 func main() {
