@@ -1,0 +1,11 @@
+{{ define "index" }}
+
+<div style="background: yellow">
+    this is index.html
+
+{{ range $key, $value := .Money }}
+    <li>key: {{ $key }}, value: {{ $value }}</li>
+{{ end }}
+</div>
+
+{{ end }}

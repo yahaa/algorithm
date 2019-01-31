@@ -19,7 +19,6 @@ func ReadFrom(reader io.Reader, num int) ([]byte, error) {
 
 func main() {
 	f, err := os.Open("/Users/zihua/Documents/Repo/algorithm/go/standPackage/test.txt")
-	os.Stdin
 	info, err := f.Readdir(0)
 	fmt.Println(info)
 	fmt.Println(f.Name())

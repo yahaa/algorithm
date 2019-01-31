@@ -12,6 +12,13 @@ func max(a, b int) int {
 	return b
 }
 
+func min(a, b int) int {
+	if a > b {
+		return b
+	}
+	return a
+}
+
 // A479 codeforce
 func A479(a, b, c int) int {
 	res := 0
@@ -42,8 +49,17 @@ func A208(s string) string {
 	return s
 }
 
+func A451(n, m int) string {
+	n = min(n, m)
+	if n%2 == 0 {
+		return "Malvika"
+	}
+	return "Akshat"
+
+}
+
 func main() {
-	var s string
-	fmt.Scanf("%s", &s)
-	fmt.Println(A208(s))
+	var n, m int
+	fmt.Scanf("%d%d", &n, &m)
+	fmt.Println(A451(n, m))
 }
